@@ -1,6 +1,0 @@
-@GestorDeLimites_HostAddress = http://localhost:5105
-
-GET {{GestorDeLimites_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
