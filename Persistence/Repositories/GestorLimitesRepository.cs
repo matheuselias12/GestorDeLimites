@@ -24,7 +24,7 @@ namespace Infraestrutura.Repositories
         {
             await _dynamoDbContext.SaveAsync(gestorLimite);
         }
-        public async Task<GestorLimites?> ObterRegistros(string documento, string numConta)
+        public async Task<GestorLimites> ObterRegistros(string documento, string numConta)
         {
             var list = await _dynamoDbContext.QueryAsync<GestorLimites>(documento, Amazon.DynamoDBv2.DocumentModel.QueryOperator.Equal, new object[] { numConta }).GetRemainingAsync();
             return list.FirstOrDefault();
